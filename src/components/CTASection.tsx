@@ -3,7 +3,7 @@ import { ArrowRight, Star } from "lucide-react";
 
 const CTASection = () => {
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-32 relative overflow-hidden">
       {/* Background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-secondary/5 to-accent/5" />
       
@@ -11,9 +11,9 @@ const CTASection = () => {
       <div className="absolute top-10 left-1/4 w-8 h-8 bg-primary/20 rounded-full blur-xl animate-pulse-glow" />
       <div className="absolute bottom-10 right-1/4 w-12 h-12 bg-secondary/20 rounded-full blur-xl animate-float" />
       
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center space-y-8">
-          <div className="space-y-4">
+      <div className="container mx-auto px-6 lg:px-8 relative z-10">
+        <div className="text-center space-y-12">
+          <div className="space-y-6">
             <div className="flex justify-center items-center gap-2 mb-4">
               <div className="flex">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -53,7 +53,7 @@ const CTASection = () => {
             </Button>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 pt-12 border-t border-border">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12 pt-16 border-t border-border">
             <div className="text-center">
               <div className="text-3xl font-bold text-primary mb-2">99.9%</div>
               <div className="text-muted-foreground">Uptime</div>
