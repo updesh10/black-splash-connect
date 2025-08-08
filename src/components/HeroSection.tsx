@@ -4,7 +4,7 @@ import heroImage from "@/assets/video-call-hero.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden py-20">
+    <section className="relative min-h-screen flex items-center justify-center bg-background overflow-hidden">
       {/* Background gradient overlay */}
       <div className="absolute inset-0 bg-gradient-hero opacity-50" />
       
@@ -13,8 +13,8 @@ const HeroSection = () => {
       <div className="absolute top-40 right-20 w-6 h-6 bg-secondary rounded-full animate-float" />
       <div className="absolute bottom-32 left-20 w-3 h-3 bg-accent rounded-full animate-pulse-glow" />
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}
           <div className="space-y-8 animate-slide-up">
             <div className="space-y-4">

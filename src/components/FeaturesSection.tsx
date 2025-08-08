@@ -46,12 +46,12 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-32 bg-video-surface relative">
+    <section className="py-24 bg-video-surface relative">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/80" />
       
-      <div className="container mx-auto px-6 lg:px-8 relative z-10">
-        <div className="text-center mb-20">
+      <div className="container mx-auto px-6 relative z-10">
+        <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold mb-6">
             Everything You Need for{" "}
             <span className="bg-gradient-accent bg-clip-text text-transparent">
@@ -63,7 +63,7 @@ const FeaturesSection = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={feature.title}
