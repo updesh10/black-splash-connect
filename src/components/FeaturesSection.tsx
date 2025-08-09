@@ -46,7 +46,7 @@ const features = [
 
 const FeaturesSection = () => {
   return (
-    <section className="py-24 bg-video-surface relative">
+    <section id="features" className="py-24 bg-video-surface relative">
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-background/80" />
       

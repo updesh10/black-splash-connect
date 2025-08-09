@@ -5,6 +5,19 @@ import { useState } from "react";
 const Navigation = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      const navHeight = 64; // Height of fixed navigation
+      const elementPosition = element.offsetTop - navHeight;
+      window.scrollTo({
+        top: elementPosition,
+        behavior: 'smooth'
+      });
+    }
+    setIsMenuOpen(false); // Close mobile menu after clicking
+  };
+
   return (
     <nav className="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-6">
@@ -19,18 +32,30 @@ const Navigation = () => {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">
+            <button 
+              onClick={() => scrollToSection('features')} 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
               Features
-            </a>
-            <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('pricing')} 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
               Pricing
-            </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('about')} 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
               About
-            </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            </button>
+            <button 
+              onClick={() => scrollToSection('contact')} 
+              className="text-foreground hover:text-primary transition-colors cursor-pointer"
+            >
               Contact
-            </a>
+            </button>
           </div>
           
           {/* Desktop CTA */}
@@ -58,18 +83,30 @@ const Navigation = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border">
             <div className="flex flex-col space-y-4">
-              <a href="#features" className="text-foreground hover:text-primary transition-colors">
+              <button 
+                onClick={() => scrollToSection('features')} 
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
                 Features
-              </a>
-              <a href="#pricing" className="text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('pricing')} 
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
                 Pricing
-              </a>
-              <a href="#about" className="text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('about')} 
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
                 About
-              </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+              </button>
+              <button 
+                onClick={() => scrollToSection('contact')} 
+                className="text-foreground hover:text-primary transition-colors text-left"
+              >
                 Contact
-              </a>
+              </button>
               <div className="flex flex-col space-y-2 pt-4">
                 <Button variant="ghost" className="justify-start hover:bg-video-glass/50">
                   Sign In
